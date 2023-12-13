@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <link rel="stylesheet" href="./css.css">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    </header>
+    <body>
+        
+            <button class="board" onclick="clickon()" id="clickon">
+                <span class="offon" id="margin-left"></span>
+            </button>
+            <form>
+                <input type="text" placeholder="name" autocomplete="off" oninput="full()" id="fname">
+            </form>
+            <p id="p"></p>
+      
+        <div class="appdiv">
+            <p class="apptx">Download <br>Our App</p>
+                <p><br>Order your favorite food from your phone!!<br>
+                    To make ordering more comfortable and faster for you<br> we’ve created our personal application. <br>Now you can make orders from any device and whereever you are.</p>
+            <div class="phdiv">
+            <a href="https://apps.apple.com/us/app/mazza-more/id1159500430" target="_blank"><img class="logoimg" id="iosimg" src="./image/iosapp.png"></a>
+            <a href="https://play.google.com/store/apps/details?id=hr.apps.n279798" target="_blank"><img class="logoimg" id="andimg" src="./image/google-play-download-android-app-logo-png-transparent (1).png"></a></div>
+            
+
+            <img class="appph" onclick="clickon()" id="img-change" src="./image/showph.png">
+            <img class="appph-an" onclick="clickon()" id="android" src="./image/androidph.png">
+            
+        </div>
+     
+        </div>
+        <script>
+            var click = document.getElementById("clickon");
+            var margin = document.getElementById("margin-left");
+            var imge = document.getElementById("img-change");
+            var animg= document.getElementById("android");
+
+            function clickon() {
+                click.classList.toggle("active");
+                margin.classList.toggle("actoffon");
+                imge.classList.toggle("img-off");
+                animg.classList.toggle("appph-anon")
+          
+            }
+
+            var fullname = document.getElementById("fname");
+            var p = document.getElementById("p");
+              function full(){
+                if (fullname.value) {
+                    p.innerHTML = `hello, ${fullname.value}`  ;
+                    console.log(1);
+                }
+                else {
+                    p.innerHTML = 'hello, who';
+                    console.log(2);
+                }
+              }
+
+        </script>
+    </body>
+</html>
